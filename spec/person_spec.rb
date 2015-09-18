@@ -13,12 +13,12 @@ RSpec.describe Person do
 
   it "should return the first name" do
     example = Person.new(first_name: "John", last_name: "Smith")
-    expect(example.first_name).to eq("First Name")
+    expect(example.first_name).to eq("John")
   end
 
   it "should return the last name" do
     example = Person.new(first_name: "John", last_name: "Smith")
-    expect(example.last_name).to eq("Last Name")
+    expect(example.last_name).to eq("Smith")
   end
 
   it "should return the full name" do
@@ -28,11 +28,11 @@ RSpec.describe Person do
 
   it "should return the reverse of the full name" do
     example = Person.new(first_name: "John", last_name: "Smith")
-    expect(example.reverse_name).to eq("Smith, Jill")
+    expect(example.reverse_name).to eq("Smith, John")
   end
 
   it "should return the employment status" do
-    example = Person.new(first_name: "John", last_name: "Smith")
+    example = Person.new(first_name: "John", last_name: "Smith", employed: true)
     example.employed = true
     expect(example.employed).to eq(true)
   end
